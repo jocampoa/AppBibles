@@ -14,7 +14,7 @@
         public MainViewModel()
         {
             this.Login = new LoginViewModel();
-        }   
+        }
         #endregion
     }
 }
