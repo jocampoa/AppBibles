@@ -3,6 +3,7 @@
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Views;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -10,6 +11,7 @@
         #endregion
 
         #region Atributes
+        private string email;
         private string password;
         private bool isRunning;
         private bool isEnabled;
@@ -18,8 +20,14 @@
         #region Properties
         public string Email
         {
-            get;
-            set;
+            get
+            {
+                return this.email;
+            }
+            set
+            {
+                SetValue(ref this.email, value);
+            }
         }
         public string Password
         {
@@ -66,6 +74,9 @@
         {
             this.IsRemembered = true;
             this.isEnabled = true;
+
+            this.Email = "jocampoa@intergrupo.com";
+            this.Password = "123456";
         }
         #endregion
 
@@ -117,10 +128,11 @@
             this.IsRunning = false;
             this.IsEnabled = true;
 
-            await Application.Current.MainPage.DisplayAlert(
-                "OK",
-                "FUCK",
-                "Accept");
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Bibles = new BiblesViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new BiblesPage());
         }
         #endregion
 
