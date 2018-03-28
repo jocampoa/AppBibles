@@ -14,6 +14,25 @@
             get;
             set;
         }
+        public BibleViewModel Bible
+        {
+            get;
+            set;
+        }
+
+        public BookViewModel Book
+        {
+            get;
+            set;
+        }
+        #endregion
+
+        #region Properties
+        public string SelectedModule
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructors

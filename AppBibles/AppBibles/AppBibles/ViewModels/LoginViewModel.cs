@@ -135,6 +135,5 @@
             await Application.Current.MainPage.Navigation.PushAsync(new BiblesPage());
         }
         #endregion
-
     }
 }
