@@ -63,6 +63,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Resource.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.it.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Resource.pt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,6 +150,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Resource.es.resx" />
+    <EmbeddedResource Include="Resources\Resource.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Resource.pt.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.pt.Designer.cs</LastGenOutput>

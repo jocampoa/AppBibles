@@ -104,7 +104,7 @@
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
-                    "You must enter a password",
+                    Languages.PasswordValidation,
                     Languages.Accept);
                 return;
             }
@@ -119,7 +119,7 @@
 
                 await Application.Current.MainPage.DisplayAlert(
                      Languages.Error,
-                    "Email or password incorrect",
+                     Languages.Incorrect,
                      Languages.Accept);
                 this.Password = string.Empty;
                 return;
