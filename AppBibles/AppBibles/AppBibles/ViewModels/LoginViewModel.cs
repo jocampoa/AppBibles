@@ -4,7 +4,7 @@
     using System.Windows.Input;
     using Xamarin.Forms;
     using Views;
-
+    using Helpers;
     public class LoginViewModel : BaseViewModel
     {
         #region Events
@@ -94,18 +94,18 @@
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a email",
-                    "Accept");
+                    Languages.Error,
+                    Languages.EmailValidation,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     "You must enter a password",
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
@@ -118,9 +118,9 @@
                 this.IsEnabled = true;
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                     Languages.Error,
                     "Email or password incorrect",
-                    "Accept");
+                     Languages.Accept);
                 this.Password = string.Empty;
                 return;
             }
