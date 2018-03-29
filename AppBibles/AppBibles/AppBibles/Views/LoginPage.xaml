@@ -4,7 +4,7 @@
              xmlns:i18n="clr-namespace:AppBibles.Helpers"
              x:Class="AppBibles.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Login">
+             Title="{i18n:Translate Login}">
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Login}">

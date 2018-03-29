@@ -132,7 +132,7 @@
             this.Password = string.Empty;
 
             MainViewModel.GetInstance().Bibles = new BiblesViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new BiblesPage());
+            await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
         }
         #endregion
     }

@@ -120,6 +120,15 @@
   <data name="Accept" xml:space="preserve">
     <value>Accettare</value>
   </data>
+  <data name="Bible" xml:space="preserve">
+    <value>Bibbia</value>
+  </data>
+  <data name="Bibles" xml:space="preserve">
+    <value>Bibbie</value>
+  </data>
+  <data name="Book" xml:space="preserve">
+    <value>Libro</value>
+  </data>
   <data name="EMail" xml:space="preserve">
     <value>E-mail</value>
   </data>
@@ -141,6 +150,15 @@
   <data name="Login" xml:space="preserve">
     <value>Accesso</value>
   </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Chiudi sessione</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Il mio profilo</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Parola d'ordine</value>
   </data>
@@ -155,5 +173,8 @@
   </data>
   <data name="Rememberme" xml:space="preserve">
     <value>Rememberme in questo dispositivo</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistica</value>
   </data>
 </root>

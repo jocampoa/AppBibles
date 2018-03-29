@@ -77,5 +77,40 @@
         {
             get { return Resource.Incorrect; }
         }
+
+        public static string Bibles
+        {
+            get { return Resource.Bibles; }
+        }
+
+        public static string Bible
+        {
+            get { return Resource.Bible; }
+        }
+
+        public static string Book
+        {
+            get { return Resource.Book; }
+        }
+
+        public static string Menu
+        {
+            get { return Resource.Menu; }
+        }
+
+        public static string MyProfile
+        {
+            get { return Resource.MyProfile; }
+        }
+
+        public static string Statistics
+        {
+            get { return Resource.Statistics; }
+        }
+
+        public static string LogOut
+        {
+            get { return Resource.LogOut; }
+        }
     }
 }

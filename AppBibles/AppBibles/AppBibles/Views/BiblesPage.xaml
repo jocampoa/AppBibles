@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:AppBibles.Helpers"
              x:Class="AppBibles.Views.BiblesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Bibles">
+             Title="{i18n:Translate Bibles}">
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Bibles}"
