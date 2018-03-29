@@ -177,4 +177,7 @@
   <data name="Statistics" xml:space="preserve">
     <value>Estatística</value>
   </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Algo está errado com os serviços, por favor tente mais tarde</value>
+  </data>
 </root>

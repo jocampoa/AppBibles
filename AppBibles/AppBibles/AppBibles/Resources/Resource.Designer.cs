@@ -233,6 +233,15 @@ namespace AppBibles.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Something was wrong, please try later..
+        /// </summary>
+        public static string SomethingWrong {
+            get {
+                return ResourceManager.GetString("SomethingWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Statistics.
         /// </summary>
         public static string Statistics {

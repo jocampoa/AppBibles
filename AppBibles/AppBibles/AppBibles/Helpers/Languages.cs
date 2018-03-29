@@ -112,5 +112,10 @@
         {
             get { return Resource.LogOut; }
         }
+
+        public static string SomethingWrong
+        {
+            get { return Resource.SomethingWrong; }
+        }
     }
 }

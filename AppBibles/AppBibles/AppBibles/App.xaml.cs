@@ -2,6 +2,12 @@
 {
     using Xamarin.Forms;
     using AppBibles.Views;
+    using ViewModels;
+    using Helpers;
+    using Models;
+    using Service;
+    using System;
+    using System.Threading.Tasks;
 
     public partial class App : Application
     {
@@ -10,7 +16,7 @@
         {
             get;
             internal set;
-        } 
+        }
         #endregion
 
         #region Constructors
@@ -18,9 +24,19 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            if (string.IsNullOrEmpty(Settings.Token))
+            {
+                this.MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                var mainViewModel = MainViewModel.GetInstance();
+                mainViewModel.Token = Settings.Token;
+                mainViewModel.TokenType = Settings.TokenType;
+                mainViewModel.Bibles = new BiblesViewModel();
+                Application.Current.MainPage = new MasterPage();
+            }
         }
-
         #endregion
 
         #region Methods

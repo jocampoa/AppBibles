@@ -44,6 +44,17 @@
             set;
         }
 
+        public string Token
+        {
+            get;
+            set;
+        }
+
+        public string TokenType
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructors

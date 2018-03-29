@@ -5,8 +5,14 @@
     using Xamarin.Forms;
     using Views;
     using Helpers;
+    using Service;
+
     public class LoginViewModel : BaseViewModel
     {
+        #region Services
+        private ApiService apiService;
+        #endregion
+
         #region Events
         #endregion
 
@@ -72,11 +78,10 @@
         #region Constructors
         public LoginViewModel()
         {
+            this.apiService = new ApiService();
+
             this.IsRemembered = true;
             this.isEnabled = true;
-
-            this.Email = "jocampoa@intergrupo.com";
-            this.Password = "123456";
         }
         #endregion
 
@@ -112,27 +117,64 @@
             this.IsRunning = true;
             this.IsEnabled = false;
 
-            if (this.Email != "jocampoa@intergrupo.com" || this.Password != "123456")
+            var connection = await this.apiService.CheckConnection();
+            if (!connection.IsSuccess)
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
-
                 await Application.Current.MainPage.DisplayAlert(
-                     Languages.Error,
-                     Languages.Incorrect,
-                     Languages.Accept);
+                    Languages.Error,
+                    connection.Message,
+                    Languages.Accept);
+                return;
+            }
+
+            var token = await this.apiService.GetToken(
+                "http://landsapi1.azurewebsites.net",
+                this.Email,
+                this.Password);
+
+            if (token == null)
+            {
+                this.IsRunning = false;
+                this.IsEnabled = true;
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error,
+                    Languages.SomethingWrong,
+                    Languages.Accept);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(token.AccessToken))
+            {
+                this.IsRunning = false;
+                this.IsEnabled = true;
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error,
+                    Languages.Incorrect,
+                    Languages.Accept);
                 this.Password = string.Empty;
                 return;
             }
+
+            var mainViewModel = MainViewModel.GetInstance();
+            mainViewModel.Token = token.AccessToken;
+            mainViewModel.TokenType = token.TokenType;
+
+            if (this.IsRemembered)
+            {
+                Settings.Token = token.AccessToken;
+                Settings.TokenType = token.TokenType;
+            }   
+
+            mainViewModel.Bibles = new BiblesViewModel();
+            Application.Current.MainPage = new MasterPage();
 
             this.IsRunning = false;
             this.IsEnabled = true;
 
             this.Email = string.Empty;
             this.Password = string.Empty;
-
-            MainViewModel.GetInstance().Bibles = new BiblesViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
         }
         #endregion
     }
