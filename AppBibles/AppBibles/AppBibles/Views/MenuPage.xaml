@@ -13,6 +13,13 @@
                     Source="bible"
                     WidthRequest="100">
             </Image>
+            <Label
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="{Binding User.FullName}"
+                TextColor="White">
+            </Label>
             <ListView 
                 BackgroundColor="Navy"
                 SeparatorVisibility="None"

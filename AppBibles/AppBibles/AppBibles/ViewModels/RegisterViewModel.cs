@@ -7,6 +7,7 @@
     using Plugin.Media.Abstractions;
     using Service;
     using Xamarin.Forms;
+    using Domain;
 
     public class RegisterViewModel : BaseViewModel
     {
@@ -203,24 +204,23 @@
                 imageArray = FilesHelper.ReadFully(this.file.GetStream());
             }
 
-            //var user = new User
-            //{
-            //    Email = this.Email,
-            //    FirstName = this.FirstName,
-            //    LastName = this.LastName,
-            //    Telephone = this.Telephone,
-            //    ImageArray = imageArray,
-            //    UserTypeId = 1,
-            //    Password = this.Password,
-            //};
+            var user = new User
+            {
+                Email = this.Email,
+                FirstName = this.FirstName,
+                LastName = this.LastName,
+                Telephone = this.Telephone,
+                ImageArray = imageArray,
+                UserTypeId = 1,
+                Password = this.Password,
+            };
 
             var apiSecurity = Application.Current.Resources["APISecurity"].ToString();
             var response = await this.apiService.Post(
                 apiSecurity,
                 "/api",
                 "/Users",
-                "");
-                //user);
+                user);
 
             if (!response.IsSuccess)
             {

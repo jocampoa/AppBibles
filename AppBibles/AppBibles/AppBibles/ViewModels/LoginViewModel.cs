@@ -158,12 +158,18 @@
                 return;
             }
 
-            //var user = await this.apiService.GetUserByEmail(apiSecurity, "/api", "/Users/GetUserByEmail", this.Email);
+            var user = await this.apiService.GetUserByEmail(
+                apiSecurity, 
+                "/api", 
+                "/Users/GetUserByEmail",
+                token.TokenType,
+                token.AccessToken,
+                this.Email);
 
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;
-            //mainViewModel.User = user;
+            mainViewModel.User = user;
 
             if (this.IsRemembered)
             {

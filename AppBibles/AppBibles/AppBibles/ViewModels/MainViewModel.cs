@@ -3,7 +3,7 @@
     using System.Collections.ObjectModel;
     using Helpers;
     using Models;
-    //domain
+    using Domain;
 
     public class MainViewModel : BaseViewModel
     {
@@ -68,10 +68,10 @@
             set;
         }
 
-        public UserLocal User
+        public User User
         {
-            get { return this.user; }
-            set { SetValue(ref this.user, value); }
+            get;
+            set;
         }
         #endregion
 
