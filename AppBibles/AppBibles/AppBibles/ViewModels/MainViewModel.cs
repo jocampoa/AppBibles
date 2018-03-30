@@ -3,9 +3,14 @@
     using System.Collections.ObjectModel;
     using Helpers;
     using Models;
+    //domain
 
-    public class MainViewModel
+    public class MainViewModel : BaseViewModel
     {
+        #region Attibrutes
+        private UserLocal user;
+        #endregion
+
         #region ViewModels
         public LoginViewModel Login
         {
@@ -61,6 +66,12 @@
         {
             get;
             set;
+        }
+
+        public UserLocal User
+        {
+            get { return this.user; }
+            set { SetValue(ref this.user, value); }
         }
         #endregion
 

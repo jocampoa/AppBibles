@@ -58,6 +58,8 @@
     <Compile Include="Models\Nav.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TokenResponse.cs" />
+    <Compile Include="Models\UserLocal.cs" />
+    <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Models\Verse.cs" />
     <Compile Include="Models\Verses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
