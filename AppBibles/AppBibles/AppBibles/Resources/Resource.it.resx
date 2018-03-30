@@ -180,4 +180,70 @@
   <data name="SomethingWrong" xml:space="preserve">
     <value>Qualcosa non va nei servizi, ti preghiamo di riprovare più tardi.</value>
   </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Tocca l'immagine per cambiarla.</value>
+  </data>
+  <data name="ConfirmLabel" xml:space="preserve">
+    <value>Conferma</value>
+  </data>
+  <data name="ConfirmPlaceHolder" xml:space="preserve">
+    <value>Inserisci la conferma della chiave ...</value>
+  </data>
+  <data name="ConfirmValidation" xml:space="preserve">
+    <value>Devi inserire la conferma della chiave.</value>
+  </data>
+  <data name="FirstNameLabel" xml:space="preserve">
+    <value>Nomi</value>
+  </data>
+  <data name="FirstNamePlaceHolder" xml:space="preserve">
+    <value>Inserisci i nomi ...</value>
+  </data>
+  <data name="FirstNameValidation" xml:space="preserve">
+    <value>Devi inserire il nome (i)</value>
+  </data>
+  <data name="LastNameLabel" xml:space="preserve">
+    <value>Cognomi</value>
+  </data>
+  <data name="LastNamePlaceHolder" xml:space="preserve">
+    <value>Inserisci i cognomi ...</value>
+  </data>
+  <data name="LastNameValidation" xml:space="preserve">
+    <value>Devi inserire il cognome (i).</value>
+  </data>
+  <data name="PhoneLabel" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="PhonePlaceHolder" xml:space="preserve">
+    <value>Inserisci il telefono ...</value>
+  </data>
+  <data name="PhoneValidation" xml:space="preserve">
+    <value>Devi inserire un telefono.</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Registra nuovo utente</value>
+  </data>
+  <data name="ConfirmValidation2" xml:space="preserve">
+    <value>La password e la conferma non corrispondono.</value>
+  </data>
+  <data name="EmailValidation2" xml:space="preserve">
+    <value>Devi inserire un indirizzo email valido.</value>
+  </data>
+  <data name="PasswordValidation2" xml:space="preserve">
+    <value>La password deve contenere almeno sei (6) caratteri</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>annullare</value>
+  </data>
+  <data name="FromCamera" xml:space="preserve">
+    <value>Dalla fotocamera</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>Dalla galleria</value>
+  </data>
+  <data name="SourceImageQuestion" xml:space="preserve">
+    <value>Da dove vuoi prendere l'immagine?</value>
+  </data>
+  <data name="UserRegisteredMessage" xml:space="preserve">
+    <value>Utente registrato, è possibile inserire con questa e-mail e la password assegnata.</value>
+  </data>
 </root>
