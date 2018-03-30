@@ -11,6 +11,7 @@
     {
         #region Services
         private ApiService apiService;
+        private DataService dataService;
         #endregion
 
         #region Events
@@ -79,6 +80,7 @@
         public LoginViewModel()
         {
             this.apiService = new ApiService();
+            this.dataService = new DataService();
 
             this.IsRemembered = true;
             this.isEnabled = true;
@@ -166,15 +168,20 @@
                 token.AccessToken,
                 this.Email);
 
+            var userLocal = Converter.ToUserLocal(user);
+
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;
-            mainViewModel.User = user;
+            mainViewModel.User = userLocal;
 
             if (this.IsRemembered)
             {
                 Settings.Token = token.AccessToken;
                 Settings.TokenType = token.TokenType;
+
+                this.dataService.DeleteAllAndInsert(userLocal);
+                this.dataService.DeleteAllAndInsert(token);
             }   
 
             mainViewModel.Bibles = new BiblesViewModel();

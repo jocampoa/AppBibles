@@ -30,9 +30,15 @@
             }
             else
             {
+                var dataService = new DataService();
+                var user = dataService.First<UserLocal>(false);
+
                 var mainViewModel = MainViewModel.GetInstance();
                 mainViewModel.Token = Settings.Token;
                 mainViewModel.TokenType = Settings.TokenType;
+
+                mainViewModel.User = user;
+
                 mainViewModel.Bibles = new BiblesViewModel();
                 Application.Current.MainPage = new MasterPage();
             }
