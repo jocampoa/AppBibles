@@ -19,7 +19,7 @@ namespace AppBibles.Droid.Implementations
             var activity = this.Context as Activity;
 
             var auth = new OAuth2Authenticator(
-                clientId: "205774500008151",
+                clientId: "145450672954103",
                 scope: "email",
                 authorizeUrl: new Uri("https://www.facebook.com/dialog/oauth/"),
                 redirectUrl: new Uri("https://www.facebook.com/connect/login_success.html"));
