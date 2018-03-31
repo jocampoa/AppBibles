@@ -169,20 +169,23 @@
                 this.Email);
 
             var userLocal = Converter.ToUserLocal(user);
+            userLocal.Password = this.Password;
 
             var mainViewModel = MainViewModel.GetInstance();
-            mainViewModel.Token = token.AccessToken;
-            mainViewModel.TokenType = token.TokenType;
+            mainViewModel.Token = token;
             mainViewModel.User = userLocal;
 
             if (this.IsRemembered)
             {
-                Settings.Token = token.AccessToken;
-                Settings.TokenType = token.TokenType;
+                Settings.IsRemembered = "true";
+            }
+            else
+            {
+                Settings.IsRemembered = "false";
+            }
 
-                this.dataService.DeleteAllAndInsert(userLocal);
-                this.dataService.DeleteAllAndInsert(token);
-            }   
+            this.dataService.DeleteAllAndInsert(userLocal);
+            this.dataService.DeleteAllAndInsert(token);
 
             mainViewModel.Bibles = new BiblesViewModel();
             Application.Current.MainPage = new MasterPage();

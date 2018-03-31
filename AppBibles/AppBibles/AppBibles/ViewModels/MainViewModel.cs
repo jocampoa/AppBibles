@@ -41,6 +41,17 @@
             set;
         }
 
+        public MyProfileViewModel MyProfile
+        {
+            get;
+            set;
+        }
+
+        public ChangePasswordViewModel ChangePassword
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Properties
@@ -56,13 +67,7 @@
             set;
         }
 
-        public string Token
-        {
-            get;
-            set;
-        }
-
-        public string TokenType
+        public TokenResponse Token
         {
             get;
             set;
@@ -70,8 +75,14 @@
 
         public UserLocal User
         {
-            get;
-            set;
+            get
+            {
+                return this.user;
+            }
+            set
+            {
+                SetValue(ref this.user, value);
+            }
         }
         #endregion
 

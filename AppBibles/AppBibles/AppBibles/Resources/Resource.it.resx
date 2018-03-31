@@ -246,4 +246,37 @@
   <data name="UserRegisteredMessage" xml:space="preserve">
     <value>Utente registrato, è possibile inserire con questa e-mail e la password assegnata.</value>
   </data>
+  <data name="ChagePasswordConfirm" xml:space="preserve">
+    <value>La password è stata cambiata con successo.</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Cambia password</value>
+  </data>
+  <data name="ConnectionError1" xml:space="preserve">
+    <value>Verifica di avere i parametri internet attivati.</value>
+  </data>
+  <data name="ConnectionError2" xml:space="preserve">
+    <value>Verifica di disporre di una connessione Internet.</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Password corrente</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Inserisci la tua password attuale ...</value>
+  </data>
+  <data name="ErrorChangingPassword" xml:space="preserve">
+    <value>La password non può essere cambiata, per favore riprova più tardi.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nuova password</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Inserisci la nuova password ...</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>La password corrente è errata</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvare</value>
+  </data>
 </root>
