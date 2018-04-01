@@ -47,6 +47,18 @@
             set;
         }
 
+        public SearchByDatingViewModel SearchByDating
+        {
+            get;
+            set;
+        }
+
+        public SearchByKeywordViewModel SearchByKeyword
+        {
+            get;
+            set;
+        }
+
         public ChangePasswordViewModel ChangePassword
         {
             get;
@@ -123,8 +135,15 @@
             this.Menus.Add(new MenuItemViewModel
             {
                 Icon = "ic_insert_chart",
-                PageName = "StaticsPage",
-                Title = Languages.Statistics,
+                PageName = "SearchByDatingPage",
+                Title = Languages.SearchByDating,
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_insert_chart",
+                PageName = "SearchByKeywordPage",
+                Title = Languages.SearchByKeyword,
             });
 
             this.Menus.Add(new MenuItemViewModel

@@ -279,4 +279,10 @@
   <data name="Save" xml:space="preserve">
     <value>Salvare</value>
   </data>
+  <data name="SearchByDating" xml:space="preserve">
+    <value>Ricerca di incontri</value>
+  </data>
+  <data name="SearchByKeyword" xml:space="preserve">
+    <value>Ricerca per parola chiave</value>
+  </data>
 </root>

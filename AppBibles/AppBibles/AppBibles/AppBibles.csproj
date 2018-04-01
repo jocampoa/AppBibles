@@ -102,6 +102,8 @@
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
     <Compile Include="ViewModels\MyProfileViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\SearchByDatingViewModel.cs" />
+    <Compile Include="ViewModels\SearchByKeywordViewModel.cs" />
     <Compile Include="Views\BiblePage.xaml.cs">
       <DependentUpon>BiblePage.xaml</DependentUpon>
     </Compile>
@@ -131,6 +133,12 @@
     </Compile>
     <Compile Include="Views\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchByDatingPage.xaml.cs">
+      <DependentUpon>SearchByDatingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchByKeywordPage.xaml.cs">
+      <DependentUpon>SearchByKeywordPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +293,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginFacebookPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SearchByDatingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SearchByKeywordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

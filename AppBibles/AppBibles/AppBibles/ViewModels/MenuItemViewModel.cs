@@ -43,6 +43,16 @@
                 MainViewModel.GetInstance().MyProfile = new MyProfileViewModel();
                 App.Navigator.PushAsync(new MyProfilePage());
             }
+            else if (this.PageName == "SearchByDatingPage")
+            {
+                MainViewModel.GetInstance().SearchByDating = new SearchByDatingViewModel();
+                App.Navigator.PushAsync(new SearchByDatingPage());
+            }
+            else if (this.PageName == "SearchByKeywordPage")
+            {
+                MainViewModel.GetInstance().SearchByKeyword = new SearchByKeywordViewModel();
+                App.Navigator.PushAsync(new SearchByKeywordPage());
+            }
         }
         #endregion
     }

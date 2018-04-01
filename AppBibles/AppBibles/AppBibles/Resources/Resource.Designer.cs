@@ -512,6 +512,24 @@ namespace AppBibles.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dating Search.
+        /// </summary>
+        public static string SearchByDating {
+            get {
+                return ResourceManager.GetString("SearchByDating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by Keyword.
+        /// </summary>
+        public static string SearchByKeyword {
+            get {
+                return ResourceManager.GetString("SearchByKeyword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Something was wrong, please try later..
         /// </summary>
         public static string SomethingWrong {

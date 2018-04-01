@@ -282,5 +282,15 @@
         {
             get { return Resource.ErrorChangingPassword; }
         }
+
+        public static string SearchByDating
+        {
+            get { return Resource.SearchByDating; }
+        }
+
+        public static string SearchByKeyword
+        {
+            get { return Resource.SearchByKeyword; }
+        }
     }
 }
