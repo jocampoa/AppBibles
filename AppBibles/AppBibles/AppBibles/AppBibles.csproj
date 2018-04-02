@@ -122,6 +122,9 @@
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginTwitterPage.xaml.cs">
+      <DependentUpon>LoginTwitterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
@@ -305,6 +308,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\SearchByKeywordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LoginTwitterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

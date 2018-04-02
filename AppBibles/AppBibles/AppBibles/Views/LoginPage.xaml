@@ -111,8 +111,12 @@
                     </Image>
 
                     <Image
-                Source="twitter_logo"
-                WidthRequest="100">
+                        Source="twitter_logo"
+                        WidthRequest="100">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginTwitterComand}">
+                            </TapGestureRecognizer>
+                        </Image.GestureRecognizers>
                     </Image>
                     <Image
                 Source="instagram_logo"

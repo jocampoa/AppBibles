@@ -88,6 +88,20 @@
         #endregion
 
         #region Commands
+        public ICommand LoginTwitterComand
+        {
+            get
+            {
+                return new RelayCommand(LoginTwitter);
+            }
+        }
+
+        private async void LoginTwitter()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(
+                new LoginTwitterPage());
+        }
+
         public ICommand LoginFacebookComand
         {
             get
